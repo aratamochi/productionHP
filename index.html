@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>プロダクションHP</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(function(){
+        $(".btn-gnavi").on("click", function(){
+            // ハンバーガーメニューの位置を設定
+            var rightVal = 0;
+            if($(this).hasClass("open")) {
+                // 位置を移動させメニューを開いた状態にする
+                rightVal = -300;
+                // メニューを開いたら次回クリック時は閉じた状態になるよう設定
+                $(this).removeClass("open");
+            } else {
+                // メニューを開いたら次回クリック時は閉じた状態になるよう設定
+                $(this).addClass("open");
+            }
+        
+            $("#global-navi").stop().animate({
+                right: rightVal
+            }, 200);
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="index.html">プロダクションHP</a></h1>
+        <span></span>
+        <span></span>
+        <span></span>
+        <nav class="grobal-nav">
+            <ul>
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="#news">NEWS</a></li>
+                <li class="nav-item"><a href="#tarent">TARENT</a></li>
+                <li class="nav-item"><a href="#company">COMPANY</a></li>
+                <li class="nav-item"><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="top-banner-wrap">
+        <img class="top-banner" src="img/top_bunner.jpg" alt="トップバナー">
+        <div class="top-banner-text">
+            <h1>プロダクションHP</h1>
+            <p>production HP</p>
+        </div>
+    </div>
+    <section id="news" class="site-width">
+        <h1 class="title">NEWS</h1>
+        <div class="news-box">
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="category">お知らせ</span>
+                    <time class="date" datetime="2020-04-01">2020.04.01</time>
+                    <span class="news-title">事務所設立のお知らせ</span>
+                    
+                </li>
+                <li class="news-item">
+                    <span class="category">お知らせ</span>
+                    <time class="date" datetime="2020-04-01">2020.04.01</time>
+                    <span class="news-title">『100日後に死ぬワニ』に池輝明が出演！</span>
+                    
+                </li>
+                <li class="news-item">
+                    <span class="category">お知らせ</span>
+                    <time class="date" datetime="2020-04-01">2020.04.02</time>
+                    <span class="news-title">『2分の1の魔法』に才崎よし子が出演！</span>
+                    
+                </li>
+                <li class="news-item">
+                    <span class="category">お知らせ</span>
+                    <time class="date" datetime="2020-04-03">2020.04.03</time>
+                    <span class="news-title">『鬼滅の刃』に仁樹なる美が出演！</span>
+                    
+                </li>
+                <li class="news-item">
+                    <span class="category">お知らせ</span>
+                    <time class="date" datetime="2020-04-03">2020.04.03</time>
+                    <span class="news-title">新所属者のお知らせ</span>
+                    
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="tarent">
+        <section class="site-width">
+            <h1 class="title">TARENT</h1>
+            <ul class="flex">
+                <li class="panel">
+                    <img src="img/tarent04.jpg" alt="" width="300px">
+                    <p class="tarent-name">池　輝明</p>
+                </li>
+                <li class="panel">
+                    <img src="img/tarent02.jpg" alt="" width="300px">
+                    <p class="tarent-name">仁樹 なる美</p>
+                </li>
+                <li class="panel">
+                    <img src="img/tarent03.jpg" alt="" width="300px">
+                    <p class="tarent-name">才崎 よし子</p>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section id="company">
+        <h1 class="title">COMPANY</h1>
+        <section class="company-wrap">
+            <div class="site-width">
+
+                <p>住所：株式会社プロダクションHP<br>
+                    　　　東京都東京区東京0-00-00<br>
+                    TEL：00-000-000<br>
+                    代表取締役：山田花子
+                </p>
+
+            </div>
+        </section>
+    </section>
+    <section id="contact" class="site-width">
+        <h1 class="title">CONTACT</h1>
+        <form>
+            <input type="text" name="name" placeholder="NAME">
+            <input type="text" name="email" placeholder="EMAIL">
+            <textarea name="message" placeholder="MESSAGE"></textarea>
+            <div class="submit">
+                <input type="submit" name="send" value="SEND">
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        <p>© 2020 <a href="index.html">株式会社プロダクションHP</a> All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
